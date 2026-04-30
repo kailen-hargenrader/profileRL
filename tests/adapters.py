@@ -21,7 +21,12 @@ def run_tokenize_prompt_and_output(
     output_strs: list[str],
     tokenizer,
 ) -> dict[str, Tensor]:
-    return tokenize_prompt_and_output(prompt_strs=prompt_strs, output_strs=output_strs, tokenizer=tokenizer)
+    """Test entrypoint; delegates to alignment.grpo.tokenize_prompt_and_output."""
+    return tokenize_prompt_and_output(
+        prompt_strs=prompt_strs,
+        output_strs=output_strs,
+        tokenizer=tokenizer,
+    )
 
 
 def run_compute_group_normalized_rewards(

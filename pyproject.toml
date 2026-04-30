@@ -17,8 +17,10 @@ dependencies = [
     "pytest>=8",
     "sympy",
     "tqdm>=4.67.1",
-    "transformers>=4.50.0",
+    # Transformers 5.x drops tokenizer APIs vLLM 0.8.x still reads (e.g. Qwen2Tokenizer.all_special_tokens_extended).
+    "transformers>=4.51.1,<5",
     "typer>=0.15.4",
+    "vllm>=0.2.5",
     "wandb>=0.19.8",
 ]
 

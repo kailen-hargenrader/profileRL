@@ -36,4 +36,12 @@ DIRECT_PROMPT_TEMPLATE = """Please answer with ONLY the answer enclosed in <answ
 Question: {question}
 """
 
-COT_PROMPT_TEMPLATE = LazyPromptTemplate()
+COT_PROMPT_TEMPLATE = """A conversation between User and Assistant. The User asks a question, and the
+Assistant solves it. The Assistant first thinks about the reasoning process in the
+mind and then provides the User with the answer. The reasoning process is enclosed
+within <think> </think> and answer is enclosed within <answer> </answer> tags,
+respectively, i.e., <think> reasoning process here </think> <answer> answer here </
+answer>.
+User: {question}
+Assistant: <think>
+"""
